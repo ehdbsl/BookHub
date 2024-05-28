@@ -1,0 +1,240 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f1e9; /* 베이지 배경 */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    overflow-x: hidden; /* 가로 스크롤 제거 */
+}
+
+header {
+    background-color: #87CEEB; /* 연한 하늘색 */
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 5px solid #ADD8E6; /* 연한 하늘색 테두리 */
+}
+
+h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* 섹션 스타일 */
+section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid #ADD8E6; /* 연한 하늘색 */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #87CEEB; /* 연한 하늘색 */
+}
+
+/* 폼 스타일 */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #87CEEB; /* 연한 하늘색 */
+    outline: none;
+}
+
+button {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #87CEEB; /* 연한 하늘색 */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-top: 0.5rem;
+}
+
+button:hover {
+    background-color: #ADD8E6; /* 연한 하늘색 */
+}
+
+/* 네비게이션 스타일 */
+nav ul {
+    padding: 0;
+    margin: 0 0 2rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ADD8E6; /* 연한 하늘색 */
+    border-radius: 10px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #87CEEB; /* 연한 하늘색 */
+}
+
+/* 관리자 섹션 컨테이너 스타일 */
+.container {
+    padding: 1.5rem;
+    width: 100%; /* 컨테이너를 꽉 채우도록 설정 */
+    box-sizing: border-box; /* 패딩과 테두리를 포함하여 크기 계산 */
+}
+
+/* 상단 액션 버튼 스타일 */
+.top-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.top-actions input {
+    flex: 1;
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border 0.3s;
+}
+
+.top-actions input:focus {
+    border-color: #87CEEB; /* 연한 하늘색 */
+    outline: none;
+}
+
+.top-actions button {
+    padding: 0.7rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #87CEEB; /* 연한 하늘색 */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.top-actions button:hover {
+    background-color: #ADD8E6; /* 연한 하늘색 */
+}
+
+/* 테이블 스타일 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1rem;
+    table-layout: fixed; /* 테이블 레이아웃을 고정으로 설정 */
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 0.7rem;
+    text-align: left;
+    word-wrap: break-word;
+    vertical-align: top;
+    overflow: hidden; /* 넘치는 내용을 숨기기 */
+    text-overflow: ellipsis; /* 넘치는 텍스트에 '...' 표시 */
+    white-space: nowrap; /* 텍스트를 한 줄로 표시 */
+}
+
+th {
+    background-color: #f4f1e9; /* 베이지 */
+    color: #87CEEB; /* 연한 하늘색 */
+}
+
+/* 비밀번호 및 주민등록번호 필드 블럭처리 */
+td.password, td.ssn {
+    color: #ccc; /* 회색으로 블럭처리 */
+    text-align: left;
+}
+
+/* 컬럼 너비 조정 */
+th:nth-child(2), td:nth-child(2), /* 비밀번호 */
+th:nth-child(6), td:nth-child(6) { /* 주민등록번호 */
+    width: 200px;
+}
+
+th:nth-child(4), td:nth-child(4), /* 전화번호 */
+th:nth-child(5), td:nth-child(5) { /* 이메일 */
+    width: 250px;
+}
+
+th, td:not(:nth-child(2)):not(:nth-child(6)):not(:nth-child(4)):not(:nth-child(5)) {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* 관리 섹션 꽉 차게 조정 */
+#admin-section {
+    width: 100%;
+    padding: 1.5rem;
+    box-sizing: border-box; /* 패딩과 테두리를 포함하여 크기 계산 */
+}
+
+/* 추가된 회원 정보 폼 숨기기 */
+#addUserForm {
+    display: none;
+}
+
+/* 페이지네이션 스타일 */
+#pagination {
+    display: flex;
+    justify-content: center; /* 중앙에 배치 */
+    gap: 0.5rem; /* 페이지 번호 간 간격 조정 */
+    margin-top: 1rem;
+}
+
+.page-number {
+    padding: 0.5rem 1rem;
+    border: 1px solid #87CEEB; /* 연한 하늘색 테두리 */
+    border-radius: 5px;
+    background-color: #f4f1e9; /* 베이지 배경 */
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.page-number:hover {
+    background-color: #87CEEB; /* 연한 하늘색 배경 */
+    color: white;
+}

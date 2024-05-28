@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    font-family: "Noto Sans KR", "Ubuntu";
+    font-size: 14px;
+    margin: 0;
+    padding: 0;
+    color: #444;
+    overflow-x: hidden;
+    
+}
+
+body {
+    margin: 0;
+    padding-bottom: 60px; /* 네비게이션 바의 높이만큼 바디 패딩 추가 */
+    background-color: #f1f1f1;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+
+.mains {
+    margin-bottom: 60px;
+}
+
+.tab-bar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f1f1f1;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* 네비게이션 바 높이 */
+    z-index: 9999;
+}
+.tab-bar a {
+    flex-grow: 1;
+    text-align: center;
+    padding: 14px 0;
+    text-decoration: none;
+}
+
+/* .tab-bar a:hover {
+    background-color: #575757;
+}
+.tab-bar a.active {
+    background-color: #4CAF50;
+} */
+
+h1 {
+    font-size: 40px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+button {
+    font-family: 'Noto Sans KR';
+    border: none;
+    opacity: 70%;
+    cursor: pointer;
+}
+
+input {
+    border: none;
+    outline: none;
+    background-color: #f1f1f1;
+}
+
+ul {
+    display: flex;
+}
+
+li {
+    list-style-type: none;
+}
+
+a:link, a:hover {
+    color: #444;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+::-webkit-scrollbar {
+    display: none; /* Chrome, Safari 및 Edge에서 스크롤바 숨기기 */
+}
+
+::-webkit-scrollbar {
+    width: 7px; /* 수직 스크롤바의 너비 */
+    height: 7px; /* 수평 스크롤바의 높이 */
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1; /* 트랙의 배경 색상 */
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #bbb; /* 핸들의 배경 색상 */
+}
+  
+::-webkit-scrollbar-thumb:hover {
+    background: #bbb; /* 핸들 위에 마우스 호버 시 색상 */
+}
+
+/* ::-webkit-scrollbar-thumb {
+  background-image: url('path_to_image.jpg'); /* 이미지 경로 
+  background-size: cover; /* 이미지 크기 조정 
+} */
+
+/* 상단 header------------------------------------------------------------------------------------- */
+
+.main {
+    width: 100%;
+}
+
+.main-campaign {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.nav {
+    /* background-image: url(../images/rec-backImg.png);
+    background-repeat: no-repeat; */
+    display: block;
+    align-items: center;
+    text-align: right;
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+.sub-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 9999; /* 최상위 레이어에 위치 */
+    animation: slideDown 0.3s ease-in-out; /* 애니메이션 */
+}
+
+@keyframes slideDown {
+    from {
+        max-height: 0;
+        opacity: 0;
+    }
+    to {
+        max-height: 300px; /* 콘텐츠 크기에 따라 조절 */
+        opacity: 1;
+    }
+}
+
+.header {
+    height: 50px;
+}
+
+.header-menu {
+    background-image: url(../images/icn-menu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    width: 32px;
+    height: 32px;
+    opacity: 80%;
+    padding: 3px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.search {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-wrapper {
+    display: flex;
+    align-items: center;
+    width:50%;
+    border: 2px solid #d3d3d3;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.search-wrapper input {
+    padding: 10px;
+    font-size: 15px;
+    width: 80%;
+}
+
+.btnSearch {
+    background-image: url(../images/icn-search.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    opacity: 70%;
+}
+
+/* event-section--------------------------------------------------------------------------------------------- */
+
+
+.section h3 {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.slider {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 500%; /* 100% x 5 images */
+}
+
+.slides img {
+    width: 20%; /* 100% / 5 images */
+    flex-shrink: 0;
+}
+
+.navigation {
+    text-align: center;
+}
+
+.page-button {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    margin: 0 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.page-button:hover {
+    background-color: #bbbbbb;
+}
+
+/* recommend-section--------------------------------------------------------------------------------------------- */
+
+
+
+/* footer-sitemap-------------------------------------------------------------------------------------------- */
+
+
+
+
+
+/* footer-navigation----------------------------------------------------------------------------------------- */
+
+.footer {
+    bottom: 0;
+}
+
+.sub-navigation {
+    position: fixed;
+    display: flex;
+    text-align: center;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+    padding: 10px 0; /* 상하 패딩 */
+    z-index: 9999;    
+}
+
+.sub-navigation p {
+    text-align: center;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.sub-navigation ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#home {
+    background-image: url(../images/icn-home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+
+}
+
+#search {
+    background-image: url(../images/icn-searchmenu.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+#ai {
+    background-image: url(../images/icn-chat.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+#location {
+    background-image: url(../images/icn-location.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+#settings {
+    background-image: url(../images/icn-setting.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+
+/* ------------------------------------------------------------------------------- */
+
+@media (min-width: 768px) {
+    body {
+        width: 600px;
+    }
+
+    .main {
+        width: 600px;
+    }
+}

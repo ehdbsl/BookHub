@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookHub 관리 프로그램</title>
+    <link rel="stylesheet" href="../styles/admin-style.css">
+</head>
+<body>
+    <header>
+        <h1>BookHub 관리 프로그램</h1>
+    </header>
+
+    <main>
+        <!-- 로그인 섹션 -->
+        <section id="login-section">
+            <h2>로그인</h2>
+            <form id="login-form">
+                <label for="username">사용자 이름:</label>
+                <input type="text" id="username" name="username" required>
+                <label for="password">비밀번호:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="bt1">로그인</button>
+            </form>
+        </section>
+
+        <!-- 관리자 페이지 섹션 -->
+        <section id="admin-section" style="display:none;">
+            <nav>
+                <ul style="list-style: none;">
+                    <li><a href="#" onclick="showSection('member-management')">회원관리</a></li>
+                    <li><a href="#" onclick="showSection('book-management')">도서관리</a></li>
+                </ul>
+            </nav>
+
+            <section id="member-management" class="management-section">
+                <div class="container">
+                    <h1>회원 관리 페이지</h1>
+                    <div class="top-actions">
+                        <input type="text" id="useridSearch" placeholder="회원 ID로 검색">
+                        <button onclick="searchUser()" class="bt1">검색</button>
+                        <button onclick="updateUser()" class="bt1">회원 정보 수정</button>
+                        <button onclick="deleteUser()" class="bt1">회원 삭제</button>
+                        <button onclick="showAddUserForm()" class="bt1">회원 추가</button>
+                        <button id="fetchUsersBtn" class="bt1">회원 정보 조회</button>
+                    </div>
+                    <div id="addUserForm">
+                        <h2>회원 추가</h2>
+                        <input type="text" class="new" id="newUserId" placeholder="아이디">
+                        <input type="text" class="new" id="newUserPw" placeholder="비밀번호">
+                        <input type="text" class="new" id="newUserName" placeholder="이름">
+                        <input type="text" class="new" id="newUserHp" placeholder="전화번호">
+                        <input type="text" class="new" id="newUserEmail" placeholder="이메일">
+                        <input type="text" class="new" id="newUserSsn" placeholder="주민등록번호">
+                        <input type="text" class="newAdd" id="newUserAddress" placeholder="주소">
+                        <button onclick="addUser()" id="bt" class="bt1">추가</button>
+                        <button onclick="closeAddUserForm()" id="bt" class="bt1">완료</button>
+                    </div>
+                    <table id="userTable">
+                        <thead>
+                            <tr>
+                                
+                                <th>아이디</th>
+                                <th>비밀번호</th>
+                                <th>이름</th>
+                                <th>전화번호</th>
+                                <th>이메일</th>
+                                <th>주민등록번호</th>
+                                <th>주소</th>                                
+                                <th></th> <!-- 작업 열 추가 -->
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                               
+                                <td data-label="아이디"><input type="text" class="new1" id="userid"></td>
+                                <td data-label="비밀번호"><input type="text" class="new1" id="userpw"></td>
+                                <td data-label="이름"><input type="text" class="new1" id="name"></td>
+                                <td data-label="전화번호"><input type="text" class="new1" id="hp"></td>
+                                <td data-label="이메일"><input type="text" class="new1" id="email"></td>
+                                <td data-label="주민등록번호"><input type="text" class="new1" id="ssn"></td>
+                                <td data-label="주소"><input type="text" class="new1" id="address"></td>
+                                <td><button onclick="clearUserForm()" class="bt1" id="bt">지우기</button></td> <!-- 지우기 버튼 추가 -->
+                            </tr>
+                        </tbody>
+                    </table>
+                    <h2>회원 목록</h2>
+                    <table id="allUsersTable">
+                        <thead>
+                            <tr>
+                                <th class="number-column">번호</th>
+                                <th>아이디</th>
+                                <th>이름</th>
+                                <th>전화번호</th>
+                                <th>이메일</th>
+                                <th>주민등록번호</th>
+                                <th>주소</th>                                
+                            </tr>
+                        </thead>
+                        <tbody id="tb">
+                            <!-- 회원 목록이 여기에 추가됩니다 -->
+                        </tbody>
+                    </table>
+                    <div id="pagination">
+                        <!-- 페이지 넘김 버튼이 여기 표시됩니다 -->
+                    </div>
+                </div>
+            </section>
+
+            <section id="book-management" class="management-section" style="display:none;">
+                <h2>도서관리</h2>
+                <input type="text" id="bookSearch" placeholder="도서 제목으로 검색">
+                <button onclick="searchBook()">조회</button>
+                <button onclick="editBook()">수정</button>
+                <button onclick="deleteBook()">삭제</button>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>도서 ID</th>
+                            <th>제목</th>
+                            <th>저자</th>
+                            <th>출판사</th>
+                            <th>업데이트된 날짜</th>
+                            <th>대출 가능 여부</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bookTableBody">
+                        <!-- 도서 데이터가 여기에 추가될 것입니다 -->
+                    </tbody>
+                </table>
+                <div id="pagination">
+                    <!-- 페이지 넘김 버튼이 여기 표시됩니다 -->
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+    <script src="../script2.js"></script>
+</body>
+</html>

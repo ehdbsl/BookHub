@@ -1,0 +1,110 @@
+/* body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #f0f0f0;
+} */
+
+.container {
+    /* width: 600px; 고정 너비 */
+    margin-top: 1px;
+    overflow: hidden; /* 배너가 컨테이너 너비를 초과하지 않도록 */
+}
+
+.group-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+#icn-bookinfo {
+    width: 30px;
+    height: 30px;
+    opacity: 50%;
+}
+
+h2 {
+    font-size: 20px;
+}
+.banner {
+    width: 100%;
+    display: block; /* 이미지 아래 빈 공간을 없애기 위함 */
+    height: 300px; /* 높이 조절 */
+}
+
+.table-group1 {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.table-group {
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 20px; /* 각 테이블 그룹 사이 간격 */
+}
+
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+th {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #e9e9e9;
+    padding: 8px;
+}
+
+td {
+    padding: 8px;
+}
+
+td:hover {
+    background-color: #e7e7e7;
+}
+
+#item-index {
+    text-align: center;
+}
+
+#item-title {
+    /* display: block; */
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.item-author-publisher {
+    max-width: 80px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    color: #444;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+.pagination button:hover {
+    background-color: #e7e7e7;
+}
+
+.pagination button.active {
+    background-color: #c0c0c0;
+}
+

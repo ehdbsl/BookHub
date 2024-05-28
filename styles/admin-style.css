@@ -1,0 +1,214 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f1e9; /* 베이지 배경 */
+    margin: 0;
+    padding: 0;
+    color: #333;
+    /* overflow-x: hidden; 가로스크롤 제거 */
+}
+
+header {
+    background-color: #87CEEB; /* 연한 하늘색 */
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 5px solid #ADD8E6; /* 연한 하늘색 */
+}
+
+header > h1 {
+    color: white;
+}
+
+h1 {    
+    font-size: 3rem;
+    border-bottom: 2px solid #ADD8E6; /* 연한 하늘색 */    
+    color: #87CEEB; /* 연한 하늘색 */
+    text-align: center;   
+    margin-bottom: 60px; 
+}
+
+main {
+    width: 95%;
+    margin: 0 auto;
+}
+
+section {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    border-bottom: 2px solid #ADD8E6; /* 연한 하늘색 */
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    color: #87CEEB; /* 연한 하늘색 */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 0.5rem 0 0.2rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 0.7rem;
+    border: 1px solid #ddd;
+    border-radius: 7px;
+    margin-bottom: 1rem;
+    transition: border 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: #87CEEB; /* 연한 하늘색 */
+    outline: none;   
+}
+
+.bt1 {
+    width: 120px;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 6px;
+    background-color: #87CEEB; /* 연한 하늘색 */
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    /* margin-top: rem; */
+}
+
+button:hover {
+    background-color: #ADD8E6; /* 연한 하늘색 */
+}
+
+nav ul {
+    padding: 0;
+    margin: 0 0 1rem;
+    display: flex;
+    justify-content: space-around;
+    background-color: #ADD8E6; /* 연한 하늘색 */
+    border-radius: 10px;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+nav ul li a {
+    display: block;
+    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #87CEEB; /* 연한 하늘색 */
+}
+
+.container {
+    padding: 0.5rem;
+}
+
+.top-actions {
+    /* display: flex; */
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.top-actions input {
+    /* flex: 1; */
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    transition: border 0.3s;
+}
+
+.top-actions input:focus {
+    border-color: #87CEEB; /* 연한 하늘색 */
+    outline: none;
+}
+
+#container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;      
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    table-layout: fixed;
+}
+
+td {    
+    text-align: center;
+    word-wrap: break-word; 
+    vertical-align: auto; 
+    border: 1px solid #ddd;
+    max-width: 150px; /* 각 셀의 최대 너비 */
+    /* overflow: hidden;  넘치는 내용 숨기기 */
+    /* text-overflow: ellipsis;  넘치는 내용에 생략 부호 추가 */
+    /* white-space: nowrap;  텍스트가 줄바꿈되지 않도록 설정 */
+}
+
+th {
+    background-color: #f4f1e9; /* 베이지 */
+    color: #87CEEB; /* 연한 하늘색 */
+    text-align: center;
+    word-wrap: break-word;
+    vertical-align: auto;       
+    border: 1px solid #ddd;
+}
+
+.management-section {
+    display: none;
+}
+
+#addUserForm{
+    margin-top: 10px;
+}
+
+#addUserForm input {
+    margin-bottom: 1rem;
+}
+
+#pagination {
+    text-align: center;    
+    margin-top: 20px;
+}
+
+.new {
+    width: 100px;
+}
+
+.new1 {    
+    width: 70%;        
+    margin-top: 15px;
+    text-align: center;
+    word-wrap: break-word;
+    vertical-align: auto;  
+    border: 1px solid #ddd;       
+}
+
+.newAdd {
+    width: 150px;
+}
+
+#bt {
+    width: 60px;    
+}
+
+/* New CSS for smaller number column */
+.number-column {
+    width: 50px;
+}
